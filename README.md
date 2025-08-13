@@ -27,7 +27,7 @@ ELT_project/
 │   ├── create_json_format.sql
 │   ├── load_product_metadata_raw.sql
 │   ├── load_sales_north_raw.sql
-│   └── get_custom_schema.sql
+│   
 ├── seeds/                   
 ├── snapshots/             
 └── target/                 
@@ -62,7 +62,6 @@ ELT_project/
 - **load_product_metadata_raw()**: Зарежда метаданни за продуктите
 - **create_csv_file_format()**: Създава CSV формат за файловете
 - **create_json_format()**: Създава JSON формат
-- **generate_schema_name()**: Управлява схемите в базата данни
 
 ## Data Quality тестове
 
