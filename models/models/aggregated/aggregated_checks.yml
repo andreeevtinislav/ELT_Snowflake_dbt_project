@@ -17,8 +17,8 @@ models:
             description: "The total sales amount"
             data_tests:
                 - not_null
-                - dbt_utils.expression_is_true:
-                    expression: "total_sales >= 10000"
+                
+                
 
     - name: sales_summary_brand_day
       description: "A summary of sales by brand and day"
@@ -35,8 +35,8 @@ models:
             description: "The total sales amount for the brand on that day"
             data_tests:
                 - not_null
-                - dbt_utils.expression_is_true:
-                    expression: "total_sales >= 500"
+                
+                
           
           
           

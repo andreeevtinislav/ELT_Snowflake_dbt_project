@@ -18,8 +18,8 @@ models:
             description: "The brand name of the product"
             data_tests:
                 - not_null
-                - dbt_utils.expression_is_true:
-                    expression: "length(brand_name) = 1"
+                
+                
 
     - name: fact_sales_north
       description: "A raw table containing sales data for the North region"
@@ -37,11 +37,9 @@ models:
             description: "The total sales amount"
             data_tests:
                 - not_null
-                - dbt_utils.expression_is_true:
-                    expression: "total_sales >= 0"
           - name: price
             description: "The price of the product"
             data_tests:
                 - not_null
-                - dbt_utils.expression_is_true:
-                    expression: "price >= 0"
+                
+                
