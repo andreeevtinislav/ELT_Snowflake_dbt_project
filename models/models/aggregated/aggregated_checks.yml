@@ -1,0 +1,47 @@
+
+version: 2
+
+models:
+    - name: sales_by_region
+      description: "A raw table containing sales data by region"
+      columns:
+          - name: region
+            description: "The region of the sales"
+            data_tests:
+                - not_null
+          - name: category
+            description: "The category of the product"
+            data_tests:
+                - not_null
+          - name: total_sales
+            description: "The total sales amount"
+            data_tests:
+                - not_null
+                - dbt_utils.expression_is_true:
+                    expression: "total_sales >= 10000"
+
+    - name: sales_summary_brand_day
+      description: "A summary of sales by brand and day"
+      columns:
+          - name: brand_name
+            description: "The brand name of the product"
+            data_tests:
+                - not_null
+          - name: month
+            description: "The month of the sales"
+            data_tests:
+                - not_null
+          - name: total_sales
+            description: "The total sales amount for the brand on that day"
+            data_tests:
+                - not_null
+                - dbt_utils.expression_is_true:
+                    expression: "total_sales >= 500"
+          
+          
+          
+          
+          
+          
+          
+          

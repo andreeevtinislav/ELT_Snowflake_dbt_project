@@ -1,0 +1,29 @@
+
+version: 2
+
+models:
+    - name: customers_raw_table
+      description: "A raw table containing customer data"
+      columns:
+          - name: product_id
+            description: "The primary key for this table"
+            data_tests:
+                - unique
+                - not_null
+          - name: category
+            description: "The category of the product"
+            data_tests:
+                - not_null
+
+    - name: sales_north_raw_table
+      description: "A raw table containing sales data for the North region"
+      columns:
+          - name: sales_id
+            description: "The primary key for this table"
+            data_tests:
+                - unique
+                - not_null
+          - name: quantity
+            description: "The quantity of products sold"
+            data_tests:
+                - not_null

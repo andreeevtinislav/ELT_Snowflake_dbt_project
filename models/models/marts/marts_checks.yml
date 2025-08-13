@@ -1,0 +1,47 @@
+
+version: 2
+
+models:
+    - name: dim_customers
+      description: "A raw table containing customer data"
+      columns:
+          - name: product_id
+            description: "The primary key for this table"
+            data_tests:
+                - unique
+                - not_null
+          - name: category
+            description: "The category of the product"
+            data_tests:
+                - not_null
+          - name: brand_name
+            description: "The brand name of the product"
+            data_tests:
+                - not_null
+                - dbt_utils.expression_is_true:
+                    expression: "length(brand_name) = 1"
+
+    - name: fact_sales_north
+      description: "A raw table containing sales data for the North region"
+      columns:
+          - name: sales_id
+            description: "The primary key for this table"
+            data_tests:
+                - unique
+                - not_null
+          - name: quantity
+            description: "The quantity of products sold"
+            data_tests:
+                - not_null
+          - name: total_sales
+            description: "The total sales amount"
+            data_tests:
+                - not_null
+                - dbt_utils.expression_is_true:
+                    expression: "total_sales >= 0"
+          - name: price
+            description: "The price of the product"
+            data_tests:
+                - not_null
+                - dbt_utils.expression_is_true:
+                    expression: "price >= 0"
