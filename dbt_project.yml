@@ -19,7 +19,12 @@ clean-targets:
 # Конфигурация по подразбиране за всички модели
 models:
   my_dbt_project:
-    staging:
-      +materialized: table   # staging модели да са таблици
-    marts:
-      +materialized: table   # marts модели да са таблици
+    models:
+      staging:
+        +materialized: table  # staging модели да са таблици
+      marts:
+        +materialized: table
+        +schema: TRANSFORMED   # marts модели да са таблици
+      aggregated:
+        +materialized: table
+        +schema: AGGREGATED    # aggregated модели да са таблици
