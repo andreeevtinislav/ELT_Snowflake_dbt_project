@@ -7,4 +7,4 @@ product_id,
 category,
 brand,
 rating
-FROM product_metadata_raw
+FROM {{source('staging_source', 'product_metadata_raw')}}

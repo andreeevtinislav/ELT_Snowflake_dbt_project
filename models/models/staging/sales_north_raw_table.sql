@@ -9,4 +9,4 @@ SELECT
     price,
     timestamp,
     total_sales
-FROM SALES_NORTH_RAW
+FROM {{source('staging_source', 'sales_north_raw')}} 

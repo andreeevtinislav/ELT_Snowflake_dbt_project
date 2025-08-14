@@ -27,8 +27,8 @@ models:
             description: "The brand name of the product"
             data_tests:
                 - not_null
-          - name: month
-            description: "The month of the sales"
+          - name: day
+            description: "The day of the sales"
             data_tests:
                 - not_null
           - name: total_sales

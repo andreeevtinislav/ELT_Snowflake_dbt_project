@@ -1,0 +1,11 @@
+version: 2
+
+sources:
+  - name: staging_source
+    database: SALES_DATA_DB
+    schema: STAGING
+    tables:
+      - name: sales_north_raw
+      - name: product_metadata_raw
+    
+    
