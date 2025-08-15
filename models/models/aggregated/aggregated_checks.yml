@@ -35,6 +35,38 @@ models:
             description: "The total sales amount for the brand on that day"
             data_tests:
                 - not_null
+
+                
+    - name: top_product_by_day
+      description: "The top product by revenue for each day"
+      columns:
+          - name: day
+            description: "The ID of the product"
+            data_tests:
+                - not_null
+          - name: revenue
+            description: "The total revenue for the product on that day"
+            data_tests:
+                - not_null
+    - name: rank_sales_revenue_by_region
+      description: "Ranked sales revenue by region"
+      columns:
+          - name: region
+            description: "The region of the sales"
+            data_tests:
+                - not_null
+          - name: rank
+            description: "The rank of the region based on total sales"
+            data_tests:
+                - not_null
+          - name: product_id
+            description: "The ID of the product"
+            data_tests:
+                - not_null
+          - name: revenue
+            description: "The total sales amount for the product in that region"
+            data_tests:
+                - not_null
                 
                 
           
