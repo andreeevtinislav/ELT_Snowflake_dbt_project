@@ -21,6 +21,8 @@ ELT_project/
 │       └── aggregated/      # Агрегирани данни
 │           ├── sales_by_region.sql
 │           └── sales_summary_brand_day.sql
+            └── rank_sales_revenue_by_region.sql
+            └── top_product_by_day.sql
             ├── aggregated_checks.yml
 ├── macros/                  # Преизползваеми SQL макроси
 │   ├── create_csv_file_format.sql
@@ -49,6 +51,8 @@ ELT_project/
 Агрегирани анализи:
 - **sales_by_region**: Продажби по регион и категория
 - **sales_summary_brand_day**: Обобщение на продажбите по брандове и дни
+- **rank_sales_revenue_by_region.sql**: Тази таблица съдържа агрегираните продажби по региони и ранкинг на регионите спрямо приходите.
+- **top_product_by_day.sql**: Тази таблица съдържа топ продуктите за деня
 
 ## Схеми в базата данни
 
@@ -65,7 +69,7 @@ ELT_project/
 
 ## Data Quality тестове
 
-Проектът включва comprehensive data quality проверки:
+Проектът включва проверки:
 
 ### Staging тестове
 - Уникалност на primary keys
